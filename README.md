@@ -15,12 +15,13 @@ Solo project ideas
 - Delete: delete custom recipes
 
 3. Core feature priorities:
-   A. Connect to API! and let 10 cocktails show on page. With basic info(name,image).
-   B. Show more details when you click on the "more details" button, don't lead to a new page, instead, show a text box by the side. Details including whether it's alcoholic, type of glass, and instruction.
-   C. Let user create their own cards. (Mongodb)
-   D. let people delete their own cards
+
+- Connect to API! and let 10 cocktails show on page. With basic info(name,image).
+- Show more details when you click on the "more details" button, don't lead to a new page, instead, show a text box by the side. Details including whether it's alcoholic, type of glass, and instruction.
+- Let user create their own cards. (Mongodb)
+- let people delete their own cards
 
 4. Reference:
 
-- API link:
+- API link: https://www.thecocktaildb.com/api/json/v2/9973533/popular.php
 - Similar project: Starwar characters (express? Need to check)
