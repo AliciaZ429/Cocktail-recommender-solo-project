@@ -1,15 +1,16 @@
 import React from "react";
-import Cocktails from "./components/Cocktails"; // Import Cocktails component
+import { Cocktails, AddCustomRecipe } from "./components/Cocktails"; // Import Cocktails component
 
 function App() {
   return (
     <div className="app">
-      <header>
-        <h1>Cocktail Recommender</h1>
+      <header className="app-header">
+        <h1>Your Cocktail Menu</h1>
         <h2>Alicia Personal Project</h2>
       </header>
       <main>
         <Cocktails />
+        <AddCustomRecipe />
       </main>
     </div>
   );

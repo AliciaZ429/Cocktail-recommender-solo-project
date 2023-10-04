@@ -1,3 +1,4 @@
+console.log("Backend server code is executing...");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -42,7 +43,7 @@ module.exports = {
       directory: path.resolve(__dirname, "build"),
     },
     proxy: {
-      "/api": "http://localhost:3000",
+      "/api": "http://localhost:3000", //** :"http://localhost:3000"
     },
   },
   resolve: {
