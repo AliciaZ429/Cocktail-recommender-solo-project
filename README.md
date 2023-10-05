@@ -25,3 +25,14 @@ Solo project ideas
 
 - API link: https://www.thecocktaildb.com/api/json/v2/9973533/popular.php
 - Similar project: Starwar characters (express? Need to check)
+
+Mid point notes
+Todo list
+(Oct 4)
+
+1. Fix react of the add recipe button. Make POST work
+2. Build GET details request.
+   (Oct 5)
+3. better CSS
+4. update recipe
+5. delete recipe
