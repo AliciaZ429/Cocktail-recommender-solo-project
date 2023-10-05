@@ -129,6 +129,12 @@ h3 {
   cursor: pointer;
 }
 
+.popup input {
+  margin: 5px 0; /* Add spacing between input boxes */
+  padding: 1px;
+  width: 50%; /* Make input boxes expand to full width */
+}
+
 .popup button:hover {
   background-color: #314f7c;
 }

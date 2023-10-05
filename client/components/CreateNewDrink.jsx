@@ -105,6 +105,31 @@ const CreateNewDrink = () => {
           />
         </div>
         <div>
+          <label>Alcoholic:</label>
+          <input
+            type="text"
+            value={strAlcoholic}
+            onChange={(e) => setStrAlcoholic(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Category:</label>
+          <input
+            type="text"
+            value={strCategory}
+            onChange={(e) => setStrCategory(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Glass:</label>
+          <input
+            type="text"
+            value={strGlass}
+            onChange={(e) => setStrGlass(e.target.value)}
+          />
+        </div>
+
+        <div>
           <label>Ingredient 1:</label>
           <input
             type="text"

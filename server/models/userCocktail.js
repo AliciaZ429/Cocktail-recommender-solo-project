@@ -4,6 +4,7 @@ const cocktailSchema = new mongoose.Schema({
   idDrink: String,
   strDrink: String,
   strTags: String,
+  strName: String,
   strIBA: String,
   strAlcoholic: String,
   strCategory: String,
