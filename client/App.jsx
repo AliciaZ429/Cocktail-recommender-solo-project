@@ -18,27 +18,27 @@ function App() {
 
   return (
     <div className="app">
+      <nav>
+        <ul className="navbar-list">
+          <li className="navbar-item">
+            <h1>Your Cocktail Menu</h1>
+          </li>
+          <li className="navbar-item">
+            <button onClick={toggleModal}>Add Custom Recipe</button>
+          </li>
+        </ul>
+      </nav>
       <header>
-        <h1>Your Cocktail Menu</h1>
-        <nav>
-          <ul>
-            <li>
-              <button onClick={toggleModal}>Add Custom Recipe</button>
-            </li>
-          </ul>
-        </nav>
+        <div className="slogan">
+          <p>
+            Cocktails are a celebration of the fine balance <br></br> between
+            taste and presentation
+          </p>
+        </div>
       </header>
       <main>
         <Cocktails onCardClick={handleCardClick} />
       </main>
-      {selectedCocktail && (
-        <div className="cocktail-card-details">
-          <h3>{selectedCocktail.strDrink}</h3>
-          <p>Type: {selectedCocktail.strTags}</p>
-          <p>Category: {selectedCocktail.strCategory}</p>
-          <p>Alcoholic: {selectedCocktail.strAlcoholic}</p>
-        </div>
-      )}
       <DetailsModal
         isOpen={showModal}
         cocktail={selectedCocktail}

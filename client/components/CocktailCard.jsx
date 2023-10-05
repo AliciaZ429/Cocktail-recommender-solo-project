@@ -10,9 +10,9 @@ function CocktailCard({ cocktail, onImageClick }) {
       />
 
       <h3>{cocktail.strDrink}</h3>
-      <p>Tag {cocktail.strTags}</p>
       <p>Category: {cocktail.strCategory}</p>
-      <p>Alcoholic: {cocktail.strAlcoholic}</p>
+      <p>Type: {cocktail.strAlcoholic}</p>
+      <p>Glass: {cocktail.strGlass}</p>
     </div>
   );
 }
