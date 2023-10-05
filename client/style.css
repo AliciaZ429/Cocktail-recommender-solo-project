@@ -14,6 +14,7 @@ body {
 .navbar-item {
   color: #908c68;
   margin-left: 20px;
+  font-family: "Anton", sans-serif;
 }
 
 .navbar-item button {
@@ -35,7 +36,8 @@ header {
 /* Style the slogan text */
 .slogan {
   text-align: center;
-  font-size: 30px; /* Adjust font size as needed */
+  font-size: 40px;
+  font-family: "Rye", cursive;
   color: beige;
 }
 

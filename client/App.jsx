@@ -35,6 +35,7 @@ function App() {
             taste and presentation
           </p>
         </div>
+
       </header>
       <main>
         <Cocktails onCardClick={handleCardClick} />
