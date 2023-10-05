@@ -103,3 +103,32 @@ h3 {
   z-index: 1001; /* Should be higher than the overlay */
   visibility: visible; /* Initially visible */
 }
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ac8181;
+  border: 1px solid #080808;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup button {
+  margin-top: 10px;
+  background-color: #302e2e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #314f7c;
+}

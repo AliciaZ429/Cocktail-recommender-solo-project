@@ -7,8 +7,46 @@ const userCocktailController = {
 
   async createCocktail(req, res, next) {
     try {
-      const cocktail = new UserCocktail(req.body);
-      const result = await cocktail.save();
+      // Get the data for the new drink from the request body
+      const {
+        idDrink,
+        strName,
+        strTags,
+        strIBA,
+        strAlcoholic,
+        strCategory,
+        strGlass,
+        strInstructions,
+        strDrinkThumb,
+        strIngredient1,
+        strIngredient2,
+        strIngredient3,
+        strMeasure1,
+        strMeasure2,
+        strMeasure3,
+      } = req.body;
+
+      // Create a new UserCocktail document
+      const newCocktail = new UserCocktail({
+        idDrink,
+        strName,
+        strTags,
+        strIBA,
+        strAlcoholic,
+        strCategory,
+        strGlass,
+        strInstructions,
+        strDrinkThumb,
+        strIngredient1,
+        strIngredient2,
+        strIngredient3,
+        strMeasure1,
+        strMeasure2,
+        strMeasure3,
+      });
+
+      // Save the new cocktail to the database
+      const result = await newCocktail.save();
 
       res.status(201).json(result);
     } catch (err) {
@@ -21,28 +59,21 @@ const userCocktailController = {
     }
   },
 
-  // Get a drink from the database and send it in the response
-  // param: idDrink
-  async getCocktail(req, res, next) {
-    // takeaway: colon means key in req.params, ? means key in req.query
+  // Get all custom cocktails
+  async getAllCocktails(req, res, next) {
     try {
-      const id = req.params.idDrink;
-      const result = await UserCocktail.findOne({ idDrink: id });
+      // Query the database to retrieve all custom cocktails
+      const customCocktails = await UserCocktail.find({});
 
-      if (!result) {
-        next({
-          log: "drink not found",
-          status: 404,
-          message: { err: "Drink not found" },
-        });
-      } else {
-        res.status(200).json(result);
-      }
+      // Send the custom cocktails as a JSON response
+      res.json(customCocktails);
     } catch (err) {
+      console.error("Error fetching custom cocktails:", err);
+      // Handle any errors that occur during the database query
       next({
-        log: "Error finding drink",
+        log: "Error fetching custom cocktails",
         status: 500,
-        message: { err: "An error occurred when finding drink" },
+        message: { err: "An error occurred when fetching custom cocktails" },
       });
     }
   },

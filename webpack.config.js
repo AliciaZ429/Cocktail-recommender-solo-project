@@ -30,6 +30,18 @@ module.exports = {
           "css-loader",
         ],
       },
+      {
+        test: /\.(jpg|jpeg|png|gif|svg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "assets/", // Specify the output directory for your assets
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [

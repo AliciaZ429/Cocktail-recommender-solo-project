@@ -3,10 +3,10 @@ const router = express.Router();
 const userCocktailController = require("../controllers/userCocktailController");
 
 // Create a new cocktail
-router.post("/", userCocktailController.createCocktail);
+router.post("/user-cocktail", userCocktailController.createCocktail);
 
-// Get a cocktail by ID
-router.get("/:idDrink", userCocktailController.getCocktail);
+// Get all custom cocktail by ID
+router.get("/user-cocktails", userCocktailController.getAllCocktails);
 
 // Update a cocktail by ID
 router.put("/:idDrink", userCocktailController.updateCocktail);

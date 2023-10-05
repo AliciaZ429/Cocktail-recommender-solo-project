@@ -10,7 +10,11 @@ const PORT = 3000;
 const mongoose = require("mongoose");
 const mongoURI = "mongodb+srv://Alicia:123@cluster0.fjuudz5.mongodb.net/";
 
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  dbName: "Cocktail",
+});
 
 // Check for successful database connection
 mongoose.connection.on("connected", () => {
@@ -28,7 +32,7 @@ const cocktailRoute = require("./routes/cocktailRoute");
 const userCocktailRouter = require("./routes/userCocktailRoute");
 
 // define middleware
-app.use("/api/user-cocktail", userCocktailRouter);
+app.use("/api", userCocktailRouter);
 
 // catch all 404 err
 app.use((req, res) => {
